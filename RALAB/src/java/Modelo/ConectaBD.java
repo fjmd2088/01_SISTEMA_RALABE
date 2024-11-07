@@ -26,7 +26,7 @@ public class ConectaBD {
     //String usuario="rietr_2014";
     String usuario="postgres";
     //String contrasena="r13tr_pr0d_2014";
-    String contrasena="inegi";
+    String contrasena="12345";
     public Connection conectar()
     {
         try
