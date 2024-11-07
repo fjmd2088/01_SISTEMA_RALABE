@@ -1,0 +1,226 @@
+
+
+#tabBox {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+.tabWrap {
+    width: 20%;
+    height: 65px;
+  float: none;
+}
+
+/* Hide Input Radio */
+input[type="radio"] {
+  display: none;
+}
+
+/* Tabs */
+.tab {
+  width: 100%;
+  height: 75px;
+  margin: 0 auto;
+  background: var(--colorDark);
+  border: none;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: block;
+}
+
+.label-02{
+    color: var(--colorLabelTabs);
+    vertical-align: bottom;
+    background: none;
+    display:flex;
+}
+.tab::before {
+  display: none;
+}
+.tab::after {
+  content: '';
+  display: none;
+}
+.tab span {
+  color: var(--colorLegend);
+  font-weight: 600;
+  text-align: center;
+  line-height: 35px;
+  display: block;
+}
+
+.label-01, .label-02, .label-03, .label-04, .label-05{
+    color: var(--colorLabelTabs);
+    background: var(--colorMean);
+    padding:5px;
+    display: inline-block;
+}
+
+.label-01 {
+  z-index: 5;
+}
+.label-02 {
+  z-index: 4;
+}
+.label-03 {
+  z-index: 3;
+}
+
+.label-04 {
+  z-index: 2;
+}
+
+.label-05 {
+  z-index: 1;
+}
+
+/* Display Checked Input */
+.tabWrap [id^="tab"]:checked ~ .tabContent {
+  display: block;
+}
+/* Bring Forward Checked Input */
+.tabWrap [id^="tab"]:checked + label {
+  background: var(--colorDark);
+  z-index: 6;
+}
+
+.tabWrap [class^="tab label"]:not(.label-01) {
+  margin-left: 0;
+}
+
+/* Unchecked Input Hover */
+.tabWrap [id^="tab"]:not(:checked) + label:hover {
+  background: #4388C2;
+  border: none;
+}
+
+/* Unchecked Input */
+.tabWrap [id^="tab"]:not(:checked) + label::before {
+  background: #F0EEE9;
+}
+
+/* Checked Input No Shadow*/
+.tabWrap [id^="tab"]:checked + label::after {
+  display: none;
+}
+
+/* tabContent */
+.tabContent {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  margin: 0 auto;
+  padding: 5%;
+  background: rgba(100,100,100,0.6);
+  box-shadow: 0 4px 0 0 rgba(0,0,0,0.015);
+  position: absolute;
+  /* Multiple .tab Height By Number Of .tab(s) To Get Position Absolute Top */
+  top: 195px;
+  left: 0;
+  display: none;
+  z-index: 1;
+}
+.tabContent h1, p {
+  font-family: 'Open Sans', sans-serif;
+}
+.tabContent h1 {
+  margin: 0;
+  color: var(--colorLabel);
+  font-size: 2em;
+  text-transform: uppercase;
+}
+.tabContent p {
+  margin: .5em 0;
+  color: #222;
+}
+
+/* Media Queries */
+@media (min-width: 450px) {
+  #tabBox {
+    width: 100%;
+    margin: 25px auto;
+  }
+  .tabWrap {
+    float: left;
+  }
+  .tab {
+    width: 98%;
+    height: 40px;
+    margin: 0;
+    background: var(--colorMean);
+    border-top: none;
+    position: relative;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    text-align:center;
+  }
+  .tab::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: var(--colorDark);
+    border-radius: 50%;
+    position: absolute;
+    top: 5.5px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    display: block;
+  }
+  .tab::after {
+    content: '';
+    width: 90px;
+    height: 2px;
+    background: rgba(0,0,0,0.025);
+    position: absolute;
+    top: 48px;
+    right: -15px;
+    display: block;
+  }
+  .tab span {
+    position: absolute;
+    top: 0;
+    left: 11px;
+  }
+  /* Cancel Checked Input Background */
+  .tabWrap [id^="tab"]:checked + label {
+    background : darkcyan;
+    border: 2px solid darkcyan;
+  }
+  /* Unchecked Input Hover */
+  .tabWrap [id^="tab"]:not(:checked) + label:hover {
+    background: darkcyan;
+    opacity: 0.7;
+    border: 4px solid darkcyan;
+    border-top: none;
+  }
+
+  .tabContent {
+    width: 97%;
+    padding: 25px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+}
+/*@media (min-width: 550px) {
+  #tabBox {
+    width: 95%;
+  }
+  .tabContent {
+    width: 98%;
+  }
+}*/

@@ -1,0 +1,25 @@
+
+.menu{
+    list-style: block;
+    padding: 0;
+    background: #9fc5e8;
+    margin: 3px 3px;
+    text-align: justify;
+    position: absolute;
+}
+.menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+}
+
+.menu li {
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a:hover{
+    background: #3d85c6;
+    
+}

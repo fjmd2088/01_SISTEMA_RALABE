@@ -1,0 +1,56 @@
+
+/* 
+    Created on : 17/04/202024
+    Author     : Jessica Rojas
+*/
+
+  /*Estilo tablas resumen*/
+  .summary_table{
+   width: 97%;
+   text-align: justify-all;
+   border-collapse: collapse;
+   margin: 0.4em;
+   caption-side: top;
+   background: var(--colorDark);
+   border-spacing: 10px !important;
+   empty-cells: hide;
+   position: relative;
+   color:var(--colorLabel);
+   padding: 0.2em;
+   border-radius: 10px;
+}
+.summary_table th, td {
+   vertical-align: middle;
+   border-collapse: collapse;
+   padding: 0.1em;
+/*   width: 98%;*/
+}
+
+
+.summary_table input[type=submit]{
+    margin: 0.1em;
+    padding:3px;
+}
+
+caption {
+  padding: 10px;
+  color: var(--colorMean);
+  letter-spacing: 1px;
+   font-weight: bold;
+}
+
+.summary_table th
+{
+  background: var(--colorMean);
+  border: none;
+}
+.summary_table tr:nth-child(odd) 
+{
+    background-color: #8F9AA5;
+}
+.summary_table tr:nth-child(even) 
+{
+    background-color: var(--colorBg);
+    color: var(--colorMean)
+}
+

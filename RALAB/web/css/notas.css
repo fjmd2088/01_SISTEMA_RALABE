@@ -1,0 +1,7 @@
+.nota {
+            display: none;
+            position: absolute;
+            background-color: #F0F0F0;
+            padding: 10px;
+            border: 1px solid #CCC;
+        }

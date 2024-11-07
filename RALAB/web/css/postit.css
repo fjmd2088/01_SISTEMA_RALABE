@@ -1,0 +1,33 @@
+
+
+.post-it-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 150px 20px 20px;
+            font-size: 25px;
+        }
+        .post-it {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(16, 9, 77, 0.5);
+            color: var(--colorLabel);
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            margin: 10px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .post-it::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: #a6acaf;
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+        }     

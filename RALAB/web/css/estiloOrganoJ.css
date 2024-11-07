@@ -1,0 +1,639 @@
+
+/* 
+    Created on : 02/04/202024
+    Author     : Jessica Rojas
+*/
+
+/*Declarando colores*/
+:root {
+    --colorLabel: white;
+    --colorLight1: #D9E1F2;/*Color combos azul claro*/
+    --colorLight2: #D9E1F2;/*Color cajones azul claro*/
+    --colorMean: #002060;/*Color tablas, letras de afuera de las tablas y selectores*/
+    --colorDark: #000033; 
+    --colorFocusBg: #2F75B5;/*Color enfoque*/
+    --colorRequired: red;/*Color obligatorio*/
+    --colorShadow: none;/*Color sombra*/
+    --colorButton: #000033;/*Color botones*/
+    --colorTitle: white;/*Color encabezados*/
+    --colorBg: #D4E6F1;/*#ACB9CA;/*Color fondo*/
+    --colorBgLogos: none;/*#D4E6F1; Color del fondo en los logos*/
+    --colorLegend:white;/*Color legenda*/
+    --colorFieldset: none;/*Color fondo contenedor*/
+    --colorLabelTabs: white;/*Color fondo contenedor*/
+    --colorMeanTrans: rgba(1, 49, 79, 0.7);
+}
+
+
+/*Estilo hoja general*/
+* {
+    font-family: Raleway, sans-serif;
+}
+
+/*Estilo Títulos y subtitulos*/
+
+h1 {
+  display: inline-block;
+  font-size: 1.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  font-weight: bold;
+  color: var(--colorTitle);
+  text-align: center;
+}
+h2 {
+ display: flex; /* Usar flexbox para centrar el contenido */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  font-size: 32px;
+  width: auto; /* Asegura que el h2 ocupe todo el ancho del contenedor */
+  margin: 0.5em auto; /* Centra el h2 dentro de su contenedor */
+  font-weight: bold;
+  color: var(--colorLabel);
+  background-color: var(--colorBackground); /* Asegúrate de definir el color de fondo si es necesario */
+  text-align: center; /* Opcional: asegura que el texto esté centrado si el contenido se desborda */
+}
+
+h3 {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 0.7em;
+  margin-bottom: 0em;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-weight: normal;
+  color: white;
+  /*text-shadow: 3px 3px cadetblue;*/
+  /*font-family: 'Helvetica', 'Arial', sans-serif;*/
+}
+
+#main-header {
+	background: var(--colorBgLogos);
+	color: var(--colorDark);
+	height: 60px;
+        -webkit-border-radius: 5px;
+        justify-content: space-between;
+        display:flex;
+        margin: auto;
+        padding: 5px;
+}
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+  display: inline;
+  color: var(--colorTitle);
+}
+
+/*-------------------------------------------Estilo cuerpo------------------------------------------------*/
+.fondo{
+    background-image: url(../IMAGENES/fondo.jpeg);
+    background-size: cover;
+    opacity: 0.5;
+   
+}
+body 
+{
+    background-image: url(../IMAGENES/fondo.jpeg);
+    /*background: var(--colorBg);*/
+    background-position: top;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+   /*background: linear-gradient(90deg, var(--colorDark) 0%, var(--colorMean) 45%, var(--colorLight1) 100%);*/
+padding:70px 5px;
+}
+
+/*Enfoques, obligatorios y deshabilitados*/
+*:focus {
+  background-color: var(--colorFocusBg);
+border: 3px solid #555; 
+color: white;}
+input[type=text]:focus {
+  background-color: var(--colorFocusBg);
+border: 1px solid #555; 
+color: white;}
+input[type=number]:focus {
+  background-color: var(--colorFocusBg);
+border: 1px solid #555; 
+color: white;}
+/**:required {
+  border: 1px solid var(--colorRequired);
+}
+input[type=text]:required {
+  border: 1px solid var(--colorRequired);
+}
+
+input[type=number]:required {
+  border: 1px solid var(--colorRequired);
+}*/
+input[type=number]:required:invalid {
+  border-color: #c00000;
+}
+input[type=text]:required:invalid {
+  border-color: #c00000;
+}
+.req {
+  color: var(--colorRequired);
+}
+
+input[type=submit]:active {
+  background-color: var(--colorFocusBg);
+   -webkit-box-shadow:inset 0 1px 0 ;}
+
+input[type=reset]:active {
+  background-color: var(--colorFocusBg);
+   -webkit-box-shadow:inset 0 1px 0 ;}
+
+*:disabled {
+  opacity: 40%;
+}
+
+/*Estilo botones*/
+button{
+  background-color: var(--colorButton); /* Green */
+  border: none;
+  color: whitesmoke;
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+    -webkit-border-radius: 5px;
+  box-shadow: 10px 5px 5px var(--colorShadow);
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  text-decoration: none;
+}
+
+input[type=submit]{
+  background-color: var(--colorButton); /* Green */
+  border: none;
+  color: whitesmoke;
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+    -webkit-border-radius: 5px;
+  box-shadow: 10px 5px 5px var(--colorShadow);
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+input[type=reset]{
+  background-color: var(--colorButton); /* Green */
+  border: none;
+  color: whitesmoke;
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+    -webkit-border-radius: 5px;
+  box-shadow: 10px 5px 5px var(--colorShadow);
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/*Estilo contenedores*/
+fieldset { 
+  display: flex;
+      width: 98%;
+      background: var(--colorFieldset);
+      padding: 0px 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      -webkit-border-radius: 10px;
+} 
+input[type=text]{
+  background-color: var(--colorLight2); /* Green */
+  border: none;
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: initial;
+    -webkit-border-radius: 5px;
+  box-shadow: 10px 5px 5px var(--colorShadow);
+  width: 90%;
+}
+input[type=time]{
+  background-color: var(--colorLight1); /* Green */
+  border: none;
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: initial;
+    -webkit-border-radius: 5px;
+  box-shadow: 10px 5px 5px var(--colorShadow);
+}
+input[type=date]{
+  background-color: var(--colorLight1); /* Green */
+  border: none;
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: initial;
+    -webkit-border-radius: 5px;
+  box-shadow: 10px 5px 5px var(--colorShadow);
+}
+
+label{
+  border: none;
+  text-align: left; /*alienacion*/
+  color: var(--colorLabel);
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+/*  text-shadow: 1px 2px lightskyblue;*/
+  font-weight: bolder;
+  width: 90%
+  }
+ input[type=number]{
+  background-color: var(--colorLight1); /* Green */
+  border: none;
+  color: var(--colorMean);
+  padding: 10px 15px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: auto;
+    -webkit-border-radius: 5px;
+  box-shadow: 10px 5px 5px var(--colorShadow);
+  width: 90%;
+  }
+  input[type=checkbox]{
+  background-color: var(--colorLight1); /* Green */
+  border: none;
+  color: var(--colorLabel1);
+  padding: 10px 15px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: auto;
+  }
+  select{
+  background-color: var(--colorLight1); /* Green */
+  border: none;
+  color: var(--colorMean);
+  padding: 10px 15px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: auto;
+    -webkit-border-radius: 5px;
+  box-shadow: 10px 5px 5px var(--colorShadow);
+  width: 90%;
+  }
+ .out{
+  width: auto; /* Green */
+  text-align: justify-all;
+  background: none;
+  box-shadow: none;
+  float: right;
+  color: var(--colorLabel);
+}
+.out:disabled{
+    opacity: 97%;
+    background: var(--colorFocusBg);
+    text-align: center;
+    color: var(--colorLabel)
+}
+input[type="text"]:nth-child(2) {
+    width: auto;
+}
+input[type="number"]:nth-child(2) {
+    width: auto;
+}
+
+input[readonly], textarea[readonly] {
+    opacity: 60%;
+    background: var(--colorDark);
+    text-align: center;
+    color: var(--colorLabel);
+    font-size: 16px;
+}
+  
+  /*Estilo tablas*/
+  table {
+   width: 100%;
+   text-align: justify-all;
+   border-collapse: collapse;
+   margin: 0.1em .1em .1em .1em;
+   caption-side: top;
+   background: var(--colorMeanTrans);
+   box-shadow: 10px 5px 5px var(--colorShadow);
+   -webkit-border-radius: 5px;
+   margin: 20px auto !important;
+   border-spacing: 1px !important;
+   empty-cells: hide;
+   position: relative;
+}
+th, td {
+   vertical-align: top;
+   border-collapse: collapse;
+   padding: 1em;
+/*   width: 98%;*/
+}
+ 
+legend { 
+   display: table; 
+     min-width: 0px;
+     max-width: 70%;
+     position: relative;
+     margin: 0;
+     color: var(--colorLegend);
+     text-align: center;
+     padding: 0px 10px;
+     font-size: 22px;
+    font-weight: 700;
+} 
+.nondisplay{
+  width: auto; /* Green */
+  text-align: justify;
+  color: var(--colorMean);
+  display: block;
+}
+fieldset{
+    display: inline;
+    padding: 10px;
+    
+}
+.secuencial{
+    background: var(--colorMeanTrans);
+	display: inline-table;
+        color: var(--colorLabel);
+        align-content:space-between;
+        
+        
+}
+
+.secuencial legend{
+	color: var(--colorLabel);
+	padding: 3px 10px 0px 10px;
+	background:var(--colorMeanTrans);
+	border: 1px var(--colorLight1);
+           -webkit-border-radius: 5px;
+
+}
+.secuencial input{
+	display: table-cell;
+	width: auto !important;
+        margin: 10px !important;
+        align-items: flex-end;
+}
+.secuencial select{
+	display: table-cell;
+	width: auto;
+        margin: 10px;
+        align-items: flex-end;
+}
+.secuencial label{
+	display: table-cell;
+        padding: 10px;
+        text-align: justify;
+        width: auto;
+}
+.secuencial p{
+    display: table-row;
+    align-content:space-between;
+}
+.ch td{
+    padding: 1px;
+    margin: 1px;
+    text-align: left;
+}
+
+
+
+/* Encabezado principal */
+#main-header1 {
+    color: white;
+    background-color: rgba(50, 50, 50, 0.7);
+    width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+    height: 120px;
+    left: 0; /* Posicionamos la cabecera al lado izquierdo */
+    top: 20px; /* Posicionamos la cabecera pegada arriba */
+    position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+    z-index: 1000; /* Aseguramos que el encabezado esté siempre sobre otros elementos */
+    font-size: 20px;
+    display: flex; /* Usamos flexbox para el encabezado principal */
+    align-items: center; /* Centrar los elementos verticalmente */
+    justify-content: space-between; /* Asegura que el logo esté a la izquierda y el nav a la derecha */
+}
+
+#main-header1 a {
+    color: white;
+    padding: 5px;
+}
+
+/* Logo */
+#logo-header {
+    float: left;
+    padding: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#logo-header:hover {
+    font-weight: 700;
+}
+
+/* Navegación */
+#main-header1 nav {
+    float: right;
+    background: darkcyan;
+    height: 50%; /* Ocupa el 70% de la altura del encabezado */
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#main-header1 nav ul {
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#main-header1 nav ul li {
+    /* display: inline-block; */
+    line-height: 0;
+}
+
+#main-header1 nav ul li a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: white; 
+    font-weight: 700;
+}
+
+#main-header1 nav ul li a:hover {
+    background: #0b76a6;
+}
+
+.date-container {
+    margin: 0;
+    padding: 2px;
+    background-color: rgba(10, 50, 200, 0.5);
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 12px;
+    float: right;
+    margin-top: 50px; 
+}
+
+.round-button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #0407bf;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 10px; /* Ajusta el tamaño de la fuente aquí */
+    display: flex; /* Usa flexbox para centrar el texto */
+    align-items: center; /* Centra el texto verticalmente */
+    justify-content: center; /* Centra el texto horizontalmente */
+    padding: 0; /* Evita cualquier padding adicional */
+}
+
+        /* Estilo para la ventana emergente */
+        .modal {
+            display: none; /* Oculto por defecto */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con transparencia */
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 5px;
+            width: 50%;
+        }
+
+        /* Estilo para el botón de cierre */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+ 
+        
+    .select2-container--default .select2-selection--single {
+    position: relative; /* Para posicionar elementos hijos */
+    background-color: var(--colorLight1) !important;
+    border: none;
+    color: var(--colorMean) !important;
+    padding: 5px 15px;
+    display: inline-block;
+    font-size: 14px;
+    cursor: auto;
+    border-radius: 5px;
+    width: 90%;
+    margin: 10px !important;
+    height: auto;
+    min-height: 40px; /* Ajustar según sea necesario */
+}
+
+
+
+.select2-container--default .select2-selection__arrow {
+    position: absolute;
+    right: 15px; /* Ajustar según sea necesario */
+    top: 50%; /* Centrar verticalmente */
+    width: 0; /* Asegúrate de que no afecte la posición */
+    height: 0; /* Asegúrate de que no afecte la posición */
+    border-left: 5px solid transparent; /* Tamaño de la flecha */
+    border-right: 5px solid transparent; /* Tamaño de la flecha */
+    pointer-events: none; /* Evitar interferencia de clics */
+}
+
+.select2-container--default .select2-results {
+    background-color: var(--colorFocusBg); /* Color de fondo de la lista desplegable */
+    color: var(--colorLabel); /* Color del texto */
+    font-size: 14px;
+}
+
+/* Estilo para las opciones dentro de la lista */
+.select2-container--default .select2-results__option {
+    padding: 10px;
+    border-radius: 5px; /* Redondear bordes de las opciones individuales */
+}
+
+
+/* Cambiar el color de la opción seleccionada en el select */
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: var(--colorMean) !important; /* Color del texto de la opción seleccionada */
+    background-color: var(--colorLight1); /* Fondo del select después de seleccionar */
+}
+
+/* Alinear y estilizar la "X" (botón de limpiar) */
+.select2-container--default .select2-selection__clear {
+    position: absolute; /* Para posicionarlo dentro del contenedor */
+    top: 50%; /* Centrado verticalmente */
+    right: 10px; /* Ajusta esta distancia según sea necesario */
+    transform: translateY(-50%); /* Centrado verticalmente */
+    background-color: transparent; /* Fondo transparente */
+    color: var(--colorFocusBg); /* Color de la "X" */
+    font-size: 16px; /* Tamaño del texto de la "X" */
+    cursor: pointer; /* Cambia el cursor para indicar interactividad */
+    padding: 2px; /* Ajusta el padding si es necesario */
+}
+
+/* Cambiar color al pasar el ratón */
+.select2-container--default .select2-selection__clear:hover {
+    color: orange; /* Color de la "X" al pasar el ratón */
+}
+
+.select2-container--default .select2-dropdown {
+    border-radius: 8px; /* Ajusta el valor para redondear los bordes */
+    border: none; /* Eliminar el borde */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: sombra para un mejor efecto */
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: var(--colorMean) !important; /* Cambiar el color del placeholder */
+    font-style: italic; /* Opcional: estilo de fuente */
+}
+

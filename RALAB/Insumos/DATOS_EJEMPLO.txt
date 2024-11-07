@@ -1,0 +1,18 @@
+
+ORDINARIO
+
+número/cve_exp: ORD-1T-04/2022
+estatus: en proceso de resolución.
+
+número/cve_exp: ORD-1T-29/2022
+estatus: Solcionado.
+
+EJECUCION
+
+número/cve_exp: ECON.1T-01/2022
+estatus: en proceso de resolución.
+
+número/cve_exp: ECON.1T-03/2022
+estatus: Solucionado.
+
+
